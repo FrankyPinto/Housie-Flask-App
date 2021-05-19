@@ -29,6 +29,8 @@
 
         <script>
 
+            // Script makes AJAX call every 5 seconds
+
             function fetchdata(){
                 $.ajax({
                     url: '/clientapi',
@@ -48,7 +50,7 @@
                 });
             }
 
-            // Calling the functionevery 5 seconds to check if new number is called
+            // Calling the function every 5 seconds to check if new number is called
 
             $(document).ready(function(){
                 setInterval(fetchdata,5000)
