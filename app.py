@@ -17,19 +17,22 @@ original_list = [1,2,3,4,5,6,7,8,9,10,
 recent_num = []
 numbers_called = []
 
-
+# Client Home URL
 @app.route("/")
 def homepage():
     return render_template("clienthome.html")
 
+# Client Home API
 @app.route("/clientapi", methods=['POST'])
 def clientapi():
     return json.dumps({'status':'OK','number_called':recent_num[0],'number_list':numbers_called})
 
+# Admin Home URL
 @app.route("/adminpanel")
 def adminhome():
     return render_template("adminhome.html")
 
+# Admin Home API
 @app.route("/adminapi", methods=['POST'])
 def adminapi():
     print("request recieved")
