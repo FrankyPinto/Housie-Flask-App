@@ -12,8 +12,6 @@
         <meta charset="utf-8">      
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- <meta http-equiv="refresh" content="10"> -->
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -38,10 +36,8 @@
                     type: 'POST',
                     success: function(response) {
                         var obj = JSON.parse(response)
-                        // var num = obj.number_called
                         $("#numshere").text(obj.number_list)
                         $("#numhere").text(obj.number_called)
-                        // $("#"+obj.number_called).css("background-color","yellow")
                         $.each(obj.number_list, function(ind,val){
                             $("#"+val).css("background-color","yellow")
                         });
@@ -55,26 +51,7 @@
             $(document).ready(function(){
                 setInterval(fetchdata,5000)
             });
-            // $(document).ready(function() {
-            //     $.ajax({
-            //         url: '/clientapi',
-            //         data: {'status':'OK'},
-            //         type: 'POST',
-            //         success: function(response) {
-            //             var obj = JSON.parse(response)
-            //             // var num = obj.number_called
-            //             $("#numshere").text(obj.number_list)
-            //             $("#numhere").text(obj.number_called)
-            //             // $("#"+obj.number_called).css("background-color","yellow")
-            //             $.each(obj.number_list, function(ind,val){
-            //                 $("#"+val).css("background-color","yellow")
-            //             });
-            //         },
-            //         error: function(error) {
-            //             console.log(error);
-            //         }
-            //     });
-            // });
+
         </script>
 
     </head>
