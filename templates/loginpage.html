@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>LOCKDOWN HOUSIE</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">      
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            .row{
+                padding-bottom: 10px;
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <div class="container-fluid">
+            <h1 class="text-center">LOGIN PAGE</h1>
+            <form class="form-signin" action="/loginapi" method="POST" role="form">
+                <div class="row">
+                    <input id="uname" name="u_name" type="text" placeholder="Enter username here" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="row">
+                    <input id="password" name="u_paswd" type="password" placeholder="Enter password here" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="row">
+                    <button id="btn-login" class="btn btn-lg btn-primary btn-block" type="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    </body>
+</html>
